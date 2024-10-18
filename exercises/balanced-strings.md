@@ -30,6 +30,17 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 Empty string, unique pair which can be separed in two cases balanced ones () for  and unbalanced (, multiple pairs for example "({[]})", "{[()]}", mismatched symbols ([{]}), unmatched symboles with opening ones ([{ and closing ones ])}}.
 Initialisation for each case:
 
+Empty String: "" → Expect true
+Single Balanced Pairs: "()", "[]", "{}" → Expect true
+Single Unbalanced Opening: "(", "{", "[" → Expect false
+Single Unbalanced Closing: ")", "}", "]" → Expect false
+Multiple Balanced Pairs: "()[]", "{[()]}", "({[]})" → Expect true
+Multiple Unbalanced Pairs: "{[()]}}", "{[(])}", "[{]}" → Expect false
+Unmatched Opening: "({", "[(" → Expect false
+Unmatched Closing: "}", ")" → Expect false
+Complex Nested Balanced: "{[({[()]})]}", "((((()))))" → Expect true
+Complex Nested Unbalanced: "((()))(", "{[(])}" → Expect false
+
 2. In our case we are using the method isBalanced() to test the coverage of our test cases. This method checks if a  if a string containing grouping symbols is balanced.
 First we use  a stack to store the opening symbols encountered while traversing the string. We are looking for opening symbols. If we encounter one, it is pushed onto the stack; if it's a closing symbol, we checks the basic case first which is  when stack don't contain any openings symbols, if it's the case we return `False`.  Then we verifies if the closing symbol matches the last opening symbol on the top of the stack. otherwise the method returns `false`. 
 At the end  if the stack is empty, all opening symbols have been matched correctly, and the method returns `true`. Otherwise, it returns `false`, indicating that there are unmatched opening symbols left.
