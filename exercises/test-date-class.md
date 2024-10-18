@@ -53,3 +53,10 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 ## Answer
 
+1. For the Date class, Input Space Partitioning helped identify different categories of inputs. The constructor tests include valid and invalid dates, leap years, and boundary dates, such as the 31st of a month with only 30 days. The isValidDate method checks both valid and invalid dates, while isLeapYear focuses on leap years. The nextDate and previousDate methods verify correct transitions between dates, including month and year changes. Lastly, compareTo tests for equal, earlier, and later date comparisons.
+
+2. After designing the tests, we evaluated the statement coverage. Additional tests were added to cover edge cases, such as transitions between months and years, and end-of-month dates. This ensured that all lines of code were covered.
+
+3. To check Base Choice Coverage (BCC), we analyzed predicates with multiple boolean operators, particularly in the isLeapYear method. We added test cases for all possible combinations of boolean conditions (divisibility by 4, 100, and 400) to ensure all logical options were covered.
+
+4. After using PIT to evaluate the test suite, the mutation score reached 81%, with 47 mutants killed out of 58. Some mutants survived, indicating that additional tests are needed to cover specific edge cases involving month and year transitions. Adding tests for boundary dates, such as the last day of February or the end of a year, could further improve this score.

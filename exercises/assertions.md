@@ -74,7 +74,7 @@ public void testWithPrecondition() {
     // Proceed with the test if the pre-condition is satisfied
 }
 
-4.  JUnit 5 introduces assertThrows to explicitly test for exceptions. This method is more flexible and readable than the @Test approach in JUnit 4. In fact it allows precise testing of where the exception occurs and enables you to inspect the thrown exception for further validation. 
+4.  JUnit5 introduces assertThrows to explicitly test for exceptions. This method is more flexible and readable than the @Test approach in JUnit 4. In fact it allows precise testing of where the exception occurs and enables you to inspect the thrown exception for further validation. 
 
 
 
