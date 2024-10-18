@@ -1,4 +1,0 @@
-# Created at 2024-10-17T21:39:44.694
-Boot Manifest-JAR contains absolute paths in classpath 'D:\TP-VV\VV-ESIR-TP3\code\tp3-date\target\test-classes'
-Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
-

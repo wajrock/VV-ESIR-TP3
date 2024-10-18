@@ -45,5 +45,10 @@ Complex Nested Unbalanced: "((()))(", "{[(])}" → Expect false
 First we use  a stack to store the opening symbols encountered while traversing the string. We are looking for opening symbols. If we encounter one, it is pushed onto the stack; if it's a closing symbol, we checks the basic case first which is  when stack don't contain any openings symbols, if it's the case we return `False`.  Then we verifies if the closing symbol matches the last opening symbol on the top of the stack. otherwise the method returns `false`. 
 At the end  if the stack is empty, all opening symbols have been matched correctly, and the method returns `true`. Otherwise, it returns `false`, indicating that there are unmatched opening symbols left.
 
-3.In the method  isBalanced,there is some predicate cases which use booloeans to evaluate conditions. We can find then in the method isMatching pair which uses more that two booleans.
+3. In the method  isBalanced,there is some predicate cases which use booloeans to evaluate conditions. We can find then in the method isMatching pair which uses more that two booleans.
+
+4. The mutation score from the PIT report shows 100% mutation coverage, with all 19 mutants killed. This indicates that your test suite is highly effective at catching potential issues, with no live mutants remaining. However, the line coverage is 86%, meaning 2 lines are not covered by tests.
+
+We see that 2 lines missing in coverage was from private constructor, this cosntructor is not necessary for our implementation so we remove it and we get new line coverage score of 92%.
+
 

@@ -4,9 +4,9 @@ import java.util.Stack;
 
 public class StringUtils {
 
-    private StringUtils() {
+    // private StringUtils() {
 
-    }
+    // }
 
     //vérifier si une chaine est équilibrée
     public static boolean isBalanced(String str) {

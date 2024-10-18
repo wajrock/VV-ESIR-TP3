@@ -56,4 +56,4 @@ To increase the coverage we added folowing tests case :
 
 3. We added new test cases to cover all possible combinations of conditions, including null elements, non-comparable elements, and comparable elements, ensuring that each true/false combination of interacting boolean conditions was tested at least once.
 
-4. The mutation score from the PIT report shows that the test suite achieved 85% mutation coverage, with 28 out of 33 mutants killed. While the coverage is relatively high, there are still some live mutants, indicating potential areas where the tests could be further improved. 
+4. The mutation score from the PIT report shows that the test suite achieved 85% mutation coverage, with 28 out of 33 mutants killed. With a very high line coverage of 98% (43/44)

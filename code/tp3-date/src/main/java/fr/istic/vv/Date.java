@@ -51,19 +51,23 @@ class Date implements Comparable<Date> {
 
     public Date nextDate() {
         int maxDaysInMonth = getDaysInMonth(this.month, this.year);
-        int newDay = 0;
-        int newMonth = 0;
-        int newYear = 0;
+        int newDay = this.day;
+        int newMonth = this.month;
+        int newYear = this.year;
 
         if (this.day == maxDaysInMonth){
-            if (this.month == 12){
-                newMonth = 1;
-                newYear = this.year + 1;
-            } else {
-                newMonth = this.month + 1;
-            }
             newDay = 1;
-          
+            newMonth = this.month + 1;
+
+        } else {
+            newDay = this.day + 1;
+        }
+
+        if (this.month == 12){
+            newMonth = 1;
+            newYear = this.year + 1;
+        } else {
+            newMonth = this.month + 1;
         }
 
         return new Date(newDay,newMonth,newYear);
@@ -87,8 +91,6 @@ class Date implements Comparable<Date> {
             newDay = this.day - 1;
         }
 
-        System.out.println(newDay+ " "+newMonth+" "+newYear);
-
         return new Date(newDay,newMonth,newYear);
     }
 
@@ -111,7 +113,14 @@ class Date implements Comparable<Date> {
 
     @Override
     public String toString(){
-        return this.day+"/"+(this.month <= 9 ? "0" : "")+ this.month +"/"+this.year;
+        return (this.day <= 9 ? "0" : "")+this.day+"/"+(this.month <= 9 ? "0" : "")+ this.month +"/"+this.year;
+    }
+
+    public static void main(String[] args) {
+        // Test the nextDate method for a leap year
+        Date date = new Date(28, 2, 2024);  // Leap year
+        System.out.println("Current Date: " + date);
+        System.out.println("Next Date: " + date.nextDate());
     }
 
 }

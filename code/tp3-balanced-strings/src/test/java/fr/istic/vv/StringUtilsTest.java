@@ -1,9 +1,10 @@
 package fr.istic.vv;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.Test;
 
 import static fr.istic.vv.StringUtils.isBalanced;
-import static org.junit.jupiter.api.Assertions.*;
 
 class StringUtilsTest {
 
@@ -81,7 +82,7 @@ class StringUtilsTest {
 
 
     @Test
-    Void testBalancedNestedBrackets() {
+    void testBalancedNestedBrackets() {
         
         assertTrue(isBalanced("((((()))))"), "balanced pairs.");
         assertTrue(isBalanced("{[({[()]})]}"), "balanced pairs .");
@@ -93,6 +94,3 @@ class StringUtilsTest {
     
 
 
-
-
-}

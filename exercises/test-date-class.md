@@ -59,4 +59,6 @@ Use the project in [tp3-date](../code/tp3-date) to complete this exercise.
 
 3. To check Base Choice Coverage (BCC), we analyzed predicates with multiple boolean operators, particularly in the isLeapYear method. We added test cases for all possible combinations of boolean conditions (divisibility by 4, 100, and 400) to ensure all logical options were covered.
 
-4. After using PIT to evaluate the test suite, the mutation score reached 81%, with 47 mutants killed out of 58. Some mutants survived, indicating that additional tests are needed to cover specific edge cases involving month and year transitions. Adding tests for boundary dates, such as the last day of February or the end of a year, could further improve this score.
+4. After using PIT to evaluate the test suite, the mutation score reached 80%, with 45 mutants killed out of 56. Some mutants survived and line coverage was 77%, indicating that additional tests are needed to cover specific edge cases involving month and year transitions. 
+
+After adding several tests to cover various scenarios, including month-end, year-end, leap year, and invalid date cases, we achieved a mutation score of 87% and a line coverage of 91%.

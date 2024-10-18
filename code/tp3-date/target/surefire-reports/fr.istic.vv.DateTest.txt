@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: fr.istic.vv.DateTest
--------------------------------------------------------------------------------
-Tests run: 14, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.16 s <<< FAILURE! - in fr.istic.vv.DateTest
-fr.istic.vv.DateTest.testPreviousDate  Time elapsed: 0.012 s  <<< ERROR!
-java.lang.IllegalArgumentException: Invalid date
-	at fr.istic.vv.DateTest.testPreviousDate(DateTest.java:72)
-
